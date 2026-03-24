@@ -167,7 +167,7 @@
     .cert-title{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--text);line-height:1.3;margin-bottom:.5rem;}
     .cert-footer{display:flex;align-items:center;justify-content:space-between;margin-top:.6rem;}
     .cert-date{font-size:.7rem;color:var(--text-dim);}
-    .cert-badge{font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;background:var(--blue-glow);border:1px solid var(--border);color:#0369a1;}
+    .cert-badge{font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;background:var(--blue-glow);border:1px solid var(--border);color: #0ea5e9;;}
 
     /* ══ TABS ══ */
     .tab-btn{font-family:'Syne',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.45rem 1.2rem;border-radius:100px;border:1.5px solid var(--border);color:var(--text-muted);background:transparent;cursor:pointer;transition:all .15s;}
@@ -424,7 +424,7 @@
           <div class="resume-col reveal-right">
             <h3 class="font-display font-bold text-brand flex items-center gap-2 mb-8"><span><img src=""><img src="../../assets/images/cap.jpg" alt="Cap" class="w-6 h-6 inline-block align-middle"></span> Education</h3>
             <div class="timeline">
-              <div class="timeline-item grid gap-4 mb-8" style="grid-template-columns:16px 1fr"><div class="timeline-dot"></div><div><span class="block text-[.7rem] tracking-[.12em] uppercase text-brand mb-1">2022 – 2026</span><h4 class="font-display font-bold text-[.95rem] mb-1" style="color:var(--text)">Bachelor of Science in Computer Science</h4><p class="text-[.78rem] mb-1" style="color:var(--text-muted)">University of Caloocan City</p><p class="text-[.8rem] leading-relaxed" style="color:var(--text-medium)">Major in Web &amp; Mobile Development. Dean's Lister. CS Society member.</p></div></div>
+              <div class="timeline-item grid gap-4 mb-8" style="grid-template-columns:16px 1fr"><div class="timeline-dot"></div><div><span class="block text-[.7rem] tracking-[.12em] uppercase text-brand mb-1">2022 – 2026</span><h4 class="font-display font-bold text-[.95rem] mb-1" style="color:var(--text)">Bachelor of Science in Computer Science</h4><p class="text-[.78rem] mb-1" style="color:var(--text-muted)">University of Caloocan City</p><p class="text-[.8rem] leading-relaxed" style="color:var(--text-medium)">Major in Web &amp; Mobile Development. CS Society member.</p></div></div>
               <div class="timeline-item grid gap-4 mb-8" style="grid-template-columns:16px 1fr"><div class="timeline-dot"></div><div><span class="block text-[.7rem] tracking-[.12em] uppercase text-brand mb-1">2020 – 2022</span><h4 class="font-display font-bold text-[.95rem] mb-1" style="color:var(--text)">Bestlink College of the Philippines</h4><p class="text-[.78rem] mb-1" style="color:var(--text-muted)">Accountancy, Business, and Management</p><p class="text-[.78rem] mb-1" style="color:var(--text-muted)"></p><p class="text-[.8rem] leading-relaxed" style="color:var(--text-medium)"> an academic track in Senior High School designed for students interested in business, entrepreneurship, finance, and corporate operations</p></div></div>
               <div class="timeline-item grid gap-4 mb-8" style="grid-template-columns:16px 1fr"><div class="timeline-dot"></div><div><span class="block text-[.7rem] tracking-[.12em] uppercase text-brand mb-1">2016 – 2020</span><h4 class="font-display font-bold text-[.95rem] mb-1" style="color:var(--text)">Bagumbong High School</h4><p class="text-[.78rem] mb-1" style="color:var(--text-muted)">Caloocan City</p><p class="text-[.8rem] leading-relaxed" style="color:var(--text-medium)">Secondary education with a focus on Science &amp; Technology.</p></div></div>
             </div>
@@ -653,7 +653,7 @@
     PROJECTS.forEach((p,i)=>{
       const art=document.createElement('article');
       art.className='project-card reveal-up';art.style.setProperty('--delay',`${.05*(i+1)}s`);
-      art.innerHTML=`<div class="project-img" aria-hidden="true"><div class="project-img-placeholder project-thumb ${p.colorClass}"><img src="${p.icon}" alt="${p.title}" class="project-image w-40 h-40 object-contain mx-auto"></div><div class="project-overlay"><a href="${p.demoUrl}" class="project-link-btn" target="_blank" rel="noopener">Live Demo ↗</a><a href="${p.githubUrl}" class="project-link-btn project-link-gh" target="_blank" rel="noopener">GitHub ↗</a></div></div><div class="project-body"><div class="project-meta"><span class="project-number">${String(p.id).padStart(2,'0')}</span><span class="project-type">${p.type}</span></div><h3 class="project-title">${p.title}</h3><p class="project-desc">${p.description}</p><div class="project-stack">${p.stack.map(t=>`<span class="stack-tag">${t}</span>`).join('')}</div></div>`;
+      art.innerHTML=`<div class="project-img" aria-hidden="true"><div class="project-img-placeholder project-thumb ${p.colorClass}"><img src="${p.icon}" alt="${p.title}" class="project-image w-40 h-40 object-contain mx-auto"></div><div class="project-overlay"><a href="${p.githubUrl}" class="project-link-btn project-link-gh" target="_blank" rel="noopener">GitHub ↗</a></div></div><div class="project-body"><div class="project-meta"><span class="project-number">${String(p.id).padStart(2,'0')}</span><span class="project-type">${p.type}</span></div><h3 class="project-title">${p.title}</h3><p class="project-desc">${p.description}</p><div class="project-stack">${p.stack.map(t=>`<span class="stack-tag">${t}</span>`).join('')}</div></div>`;
       frag.appendChild(art);
     });
     grid.appendChild(frag);
@@ -664,7 +664,7 @@
   /* ━━━━━━━━ CERTIFICATES ━━━━━━━━ */
   const CERTIFICATES=[
     {id:'cert-1',icon:'🏅',colorClass:'cert-c1',category:'AI',title:'Generative AI',issuer:'simplelearn',date:'January 2026',badge:'Generative AI',description:'',linkUrl:'assets/images/AI.pdf'},
-    {id:'cert-2',icon:'⚙️',colorClass:'cert-c2',category:'Cybersecurity',title:'Introduction to Cybersecurity',issuer:'simplelearn',date:'January 2026',badge:'JavaScript',description:'',linkUrl:'assets/images/Cyber.pdf'},
+    {id:'cert-2',icon:'⚙️',colorClass:'cert-c2',category:'Cybersecurity',title:'Introduction to Cybersecurity',issuer:'simplelearn',date:'January 2026',badge:'CyberSecurity',description:'',linkUrl:'assets/images/Cyber.pdf'},
     {id:'cert-3',icon:'🐍',colorClass:'cert-c3',category:'programming',title:'Programming with Python 3.X',issuer:'simplelearn',date:'March 2026',badge:'Python',description:'',linkUrl:'assets/images/Programming.pdf'},
     {id:'cert-4',icon:'🗄️',colorClass:'cert-c4',category:'Database',title:'Introduction to SQL',issuer:'simplelearn',date:'March 2026',badge:'Database',description:'',linkUrl:'assets/images/Database.pdf'},
     {id:'cert-5',icon:'🐙',colorClass:'cert-c1',category:'API',title:'API Beginner Learning Path',issuer:'Postman',date:'March 2026',badge:'API',description:'',linkUrl:'assets/images/API.pdf'},
